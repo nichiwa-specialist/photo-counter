@@ -14,4 +14,4 @@ deployment:
   appengine:
     branch: master
     commands:
-      - appcfg.py update --oauth2_refresh_token=$REFRESH_TOKEN .
+      - $HOME/go_appengine/appcfg.py update --oauth2_refresh_token=$REFRESH_TOKEN .

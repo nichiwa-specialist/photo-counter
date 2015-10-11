@@ -8,7 +8,7 @@ dependencies:
 test:
   override:
     - cd web/app
-      $HOME/go_appengine/goapp test
+    - $HOME/go_appengine/goapp test
 deployment:
   appengine:
     branch: master

@@ -12,4 +12,4 @@ deployment:
   appengine:
     branch: master
     commands:
-      - appcfg.py update --oauth2_refresh_token= $REFRESH_TOKEN web/app
+      - appcfg.py update --oauth2_refresh_token=$REFRESH_TOKEN web/app

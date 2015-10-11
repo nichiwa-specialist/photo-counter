@@ -1,3 +1,5 @@
+general:
+  build_dir: web/app
 machine:
   timezone:
     Asia/Tokyo
@@ -7,8 +9,9 @@ dependencies:
     - unzip -q -d $HOME $HOME/go_appengine_1.9.27.zip
 test:
   override:
+    - $HOME/go_appengine/goapp test
 deployment:
   appengine:
     branch: master
     commands:
-      - appcfg.py update --oauth2_refresh_token=$REFRESH_TOKEN web/app
+      - appcfg.py update --oauth2_refresh_token=$REFRESH_TOKEN .

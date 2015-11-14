@@ -1,0 +1,22 @@
+application: picture-counter
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+  - url: /(.*\.html)$
+    static_files: \1
+    upload: .*\.html$
+
+  - url: /js
+    static_dir: js
+
+  - url: /css
+    static_dir: css
+
+  - url: /
+    static_files: index.html
+    upload: /index.html$
+
+  - url: /.*
+    script: _go_app

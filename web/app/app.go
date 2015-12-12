@@ -6,6 +6,10 @@ import (
     "net/http"
 )
 
+func saveHandler(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Access-Control-Allow-Origin", "*")
+}
+
 func init() {
     http.HandleFunc("/hello", hello)
     http.HandleFunc("/count", count)

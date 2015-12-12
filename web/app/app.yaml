@@ -21,4 +21,4 @@ handlers:
   - url: /.*
     script: _go_app
     http_headers:
-      Access-Control-Allow-Origin: *
+      Access-Control-Allow-Origin: http://picture-counter.appspot.com/
